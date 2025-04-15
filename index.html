@@ -39,12 +39,35 @@
             transition: transform 0.3s ease;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         }
+        .profile-image {
+            border-radius: 50%;
+            border: 4px solid #3b82f6;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .profile-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+        .gallery-image {
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .gallery-image:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        }
     </style>
 </head>
 <body class="bg-gradient-to-br from-gray-50 to-gray-100 text-gray-800 selection:bg-blue-200">
     <div class="max-w-4xl mx-auto px-6 py-12 animate-fade-in">
         <!-- Header -->
         <header class="text-center mb-12 animate-slide-up">
+            <!-- Profile Image -->
+            <div class="flex justify-center mb-6">
+                <img src="./assets/profile.jpg" alt="Huỳnh Anh Thuận" class="profile-image w-40 h-40 object-cover">
+            </div>
+            
             <h1 class="text-5xl font-extrabold text-gray-900 mb-3 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
                 HUỲNH ANH THUẬN
             </h1>
@@ -138,6 +161,24 @@
                         <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium">Full Marathon </span>
                         <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium"> Ultra Marathon - 70km</span>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hình ảnh hoạt động -->
+        <section class="mb-10 section-hover bg-white rounded-xl p-6 shadow-md">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">
+                Hình ảnh hoạt động
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">
+                <div class="overflow-hidden rounded-lg">
+                    <img src="./assets/activity1.jpg" alt="Hoạt động hướng nghiệp" class="gallery-image w-full h-64 object-cover rounded-lg">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="./assets/activity2.jpg" alt="Hoạt động chạy bộ" class="gallery-image w-full h-64 object-cover rounded-lg">
+                </div>
+                <div class="overflow-hidden rounded-lg md:col-span-2">
+                    <img src="./assets/activity3.jpg" alt="Đào tạo hướng nghiệp" class="gallery-image w-full h-64 object-cover rounded-lg">
                 </div>
             </div>
         </section>
